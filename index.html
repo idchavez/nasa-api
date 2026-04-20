@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css.txt">
-    <title>Nasa api</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explorador APOD NASA</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <Header>
+    <div class="contenedor-principal">
+        <header class="encabezado">
+            <h1>Explorador APOD de la NASA</h1>
+            <p>Consulta la foto astronómica del día y guarda tus favoritas</p>
+        </header>
 
-    </Header>
-    <main>
-        <section>
-
+        <section class="panel panel-controles">
+            <div class="fila-controles">
+                <label for="campoFechaBusqueda">Buscar por fecha:</label>
+                <input type="date" id="campoFechaBusqueda" />
+                <button id="botonBuscarApod" class="boton boton-buscar">Buscar APOD</button>
+                <button id="botonGuardarFavorito" class="boton boton-guardar">Guardar en favoritos</button>
+            </div>
+            <p id="mensajeError" class="mensaje-error"></p>
         </section>
-        <section>
-
+        
+        <section class="panel panel-apod">
+            <p id="fechaApodActual" class="fecha-apod"></p>
+            <div id="contenedorImagen-Video" class="contenedor-imagen-o-video"></div>
+            <p id="explicacionApodActual" class="explicacion-apod"></p>
         </section>
-    </main>
+
+        <section class="panel panel-favoritos">
+            <h2>Favoritos guardados</h2>
+            <div id="listaDeFavoritos" class="lista-favoritos"></div>
+        </section>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>

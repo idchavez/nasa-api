@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f4f1ea;
+  color: #2f2a26;
+  padding: 24px;
+}
+
+.contenedor-principal {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 42px;
+  padding: 20px 0;
+  border-bottom: 1px solid #d8d1c7;
+}
+
+.encabezado h1 {
+  margin-bottom: 10px;
+  color: #2f2a26;
+  font-size: 42px;
+}
+
+.encabezado p {
+  color: #6f665d;
+  font-size: 21px;
+}
+
+.panel {
+  background-color: #fbf8f3;
+  border: 1px solid #d8d1c7;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.fila-controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  color: #3e3732;
+}
+
+input[type="date"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #c8beb1;
+  background-color: #ffffff;
+  color: #2f2a26;
+  min-width: 220px;
+}
+
+.boton {
+  padding: 10px 14px;
+  border: 1px solid #c8beb1;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #2f2a26;
+}
+
+.boton-buscar {
+  background-color: #d9d1c4;
+  color: #2f2a26;
+}
+
+.boton-guardar {
+  background-color: #b6ada0;
+  color: #ffffff;
+  border-color: #b6ada0;
+}
+
+.boton-ver-favorito {
+  background-color: #6a6257;
+  color: #ffffff;
+  width: 100%;
+  margin-top: 10px;
+  border-color: #6a6257;
+}
+
+.mensaje-error {
+  margin-top: 15px;
+  color: #8b3f3f;
+  font-weight: bold;
+  min-height: 20px;
+}
+
+.titulo-apod {
+  color: #2f2a26;
+  margin-bottom: 10px;
+}
+
+.fecha-apod {
+  margin-bottom: 15px;
+  color: #6f665d;
+}
+
+.contenedor-imagen-o-video {
+  margin-bottom: 20px;
+}
+
+
+.explicacion-apod {
+  line-height: 1.7;
+  color: #3e3732;
+}
+
+.lista-favoritos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+  .fila-controles {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input[type="date"],
+  .boton {
+    width: 100%;
+  }
+
+  .encabezado h1 {
+    font-size: 26px;
+  }
+}
